@@ -66,28 +66,33 @@
 
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 10rem;
         justify-content: center;
 
         .temat {
             display: flex;
+            flex-wrap: wrap;
             flex-direction: row;
             justify-content: center;
-            gap: 5rem;
+            gap: 2rem;
             &:nth-child(2n) {
                 flex-direction: row-reverse;
             }
             img {
-                width:30%;
+                width: 30%;
+                min-width: 175px;
                 object-fit: contain;
             }
             div {
                 width: 30%;
+                min-width: 175px;
+
                 text-align: center;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                
             }
         }
     }

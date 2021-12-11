@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { v4 } from "uuid";
 
+import { tematy } from "./SpisTresci";
 export default function Navbar() {
     const [bocznaNawigacja, ustawBocznaNawigacje] = useState(false);
     const zmienStanNawigacji = () => {
@@ -15,7 +17,7 @@ export default function Navbar() {
                     size="large"
                     name="menu"
                 ></ion-icon>
-                <Linki zmienStanNawigacji={zmienStanNawigacji} />
+                <Linki ustawBocznaNawigacje={ustawBocznaNawigacje} />
             </nav>
 
             <nav className="navbar glowny">
@@ -24,19 +26,36 @@ export default function Navbar() {
                     size="large"
                     name="menu"
                 ></ion-icon>
-                <Linki zmienStanNawigacji={zmienStanNawigacji} />
+                <Linki ustawBocznaNawigacje={ustawBocznaNawigacje} />
             </nav>
         </>
     );
 }
 
-const Linki = ({ zmienStanNawigacji }) => {
+const Linki = ({ ustawBocznaNawigacje }) => {
     return (
         <div className="linki">
-            <NavLink to="/">Strona Główna</NavLink>
-            <NavLink to="/">Aplikacje</NavLink>
-            <NavLink to="/">Black Mirror</NavLink>
-            <NavLink to="/">O stronie</NavLink>
+            <NavLink
+                onClick={() => {
+                    ustawBocznaNawigacje(false);
+                }}
+                to="/"
+            >
+                Strona Główna
+            </NavLink>
+            {tematy.map((temat) => {
+                return (
+                    <NavLink
+                        onClick={() => {
+                            ustawBocznaNawigacje(false);
+                        }}
+                        key={v4()}
+                        to={temat.link}
+                    >
+                        {temat.tytul}
+                    </NavLink>
+                );
+            })}
         </div>
     );
 };
