@@ -1,6 +1,6 @@
 import React from "react";
 import { v4 } from "uuid";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import urlBlackMirror from "../zdjecia/black-mirror.svg";
 import urlAplikacje from "../zdjecia/aplikacje.svg";
 import urlOstronie from "../zdjecia/frameworks.svg";
@@ -14,7 +14,7 @@ export default function SpisTresci() {
                         <div>
                             <h1>{temat.tytul}</h1>
                             <p>{temat.opis}</p>
-                            <NavLink to={temat.link}>Czytaj dalej</NavLink>
+                            <Link to={temat.link}>Czytaj dalej</Link>
                         </div>
                         <img src={temat.zdjecie} alt={temat.tytul} />
                     </div>

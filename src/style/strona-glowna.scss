@@ -92,7 +92,18 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                
+                a{
+                    text-decoration: none;
+                    color: $b-ciemny;
+                    color: $jasny;
+                    background: $akcent-ciemny;
+                    padding: 5px 8px;
+                    border-radius: 6px;
+                    transition: ease all 0.2s;
+                    &:hover{
+                        transform: scale(102%);
+                    }
+                }
             }
         }
     }

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { v4 } from "uuid";
-
 import { tematy } from "./SpisTresci";
 export default function Navbar() {
     const [bocznaNawigacja, ustawBocznaNawigacje] = useState(false);
