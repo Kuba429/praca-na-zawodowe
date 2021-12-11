@@ -1,0 +1,65 @@
+.BlackMirror {
+    // height: 80vh;
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 8rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & h1{
+        font-size: 2.6rem ;
+        text-align: center;
+    }
+    .tytul {
+        background: $b-ciemny;
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        margin: auto;
+        color: $jasny;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        h1 {
+            margin: 0;
+            font-size: 4rem;
+        }
+        p {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        a {
+            position: absolute;
+            bottom: 2rem;
+        }
+    }
+    .opis {
+        padding-top: 5rem;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 550px;
+            max-width: 98%;
+        }
+        h1 {
+            margin: 0;
+            margin-top: 3rem;
+        }
+    }
+    .technologie{
+        h1,h5{
+            margin: 0;
+            text-align: center;
+        }
+        
+    }
+}
