@@ -1,0 +1,17 @@
+.strona-glowna {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: $jasny;
+    padding: 0px;
+    .el1 {
+        height: 100vh;
+        width: 100%;
+        background: $akcent;
+    }
+    .fala {
+        position: absolute;
+        bottom: 0px;
+        transform: rotate(180deg) translateY(-90%);
+    }
+}
