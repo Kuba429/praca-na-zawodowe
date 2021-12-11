@@ -1,0 +1,111 @@
+.navbar.boczny {
+    position: absolute;
+    height: 100%;
+    width: 90%;
+    background: $ciemny;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: all ease 0.2s;
+    ion-icon {
+        align-self: flex-end;
+        margin: 20px;
+        color: $jasny;
+    }
+    .linki {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        a {
+            margin: 2rem;
+            text-decoration: none;
+            color: $jasny;
+            font-size: 1.5rem;
+            &.active {
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    background: $akcent;
+                }
+            }
+        }
+    }
+    &.aktywny {
+        transform: translateX(0%);
+    }
+}
+
+.navbar.glowny {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding: 1rem 2rem;
+    background: $b-ciemny;
+
+    ion-icon {
+        color: $jasny;
+        display: none;
+    }
+    .linki {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5rem;
+        a {
+            position: relative;
+            text-decoration: none;
+            color: rgba($jasny, 0.6);
+            transition: ease 0.1s all;
+
+            &.active {
+                color: rgba($jasny, 1);
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: $akcent;
+                width: 0;
+                height: 2px;
+                border-radius: 10px;
+                transition: ease all 0.3s;
+            }
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    .navbar.glowny {
+        .linki {
+            justify-content: space-evenly;
+        }
+        padding: 1rem 5px;
+    }
+}
+
+@media (max-width: $smartfon) {
+    .navbar.glowny {
+        padding: 10px;
+        justify-content: flex-start;
+        ion-icon {
+            display: block;
+        }
+        a {
+            display: none;
+        }
+    }
+}

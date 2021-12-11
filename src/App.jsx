@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./komponenty/Navbar";
 import StronaGlowna from "./komponenty/StronaGlowna";
 
 function App() {
     return (
         <div className="App">
-            <StronaGlowna />
+            <Navbar/>
+            <Routes>
+                <Route path="/" element={<StronaGlowna />} />
+            </Routes>
         </div>
     );
 }
