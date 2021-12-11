@@ -10,6 +10,8 @@
     transform: translateX(-100%);
     transition: all ease 0.2s;
     ion-icon {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: transparent;
         align-self: flex-end;
         margin: 20px;
         color: $jasny;
@@ -20,6 +22,8 @@
         justify-content: center;
         align-items: center;
         a {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-tap-highlight-color: transparent;
             margin: 2rem;
             text-decoration: none;
             color: $jasny;
@@ -48,9 +52,12 @@
     width: 100%;
     z-index: 100;
     padding: 1rem 2rem;
-    background: $b-ciemny;
+    background: rgba($b-ciemny,0.95);
+    
 
     ion-icon {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: transparent;
         color: $jasny;
         display: none;
     }
@@ -64,7 +71,8 @@
             text-decoration: none;
             color: rgba($jasny, 0.6);
             transition: ease 0.1s all;
-
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-tap-highlight-color: transparent;
             &.active {
                 color: rgba($jasny, 1);
             }

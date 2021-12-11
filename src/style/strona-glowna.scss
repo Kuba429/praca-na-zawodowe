@@ -1,7 +1,7 @@
 .strona-glowna {
     width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
+    height: 100%;
+    // overflow-x: hidden;
     // position: relative;
     background: $ciemny;
     background: $jasny;
@@ -10,6 +10,7 @@
         position: relative;
         height: 80vh;
         width: 100%;
+        margin-bottom: 13rem;
         background: $b-ciemny;
         display: flex;
         flex-direction: column;
@@ -17,12 +18,13 @@
         justify-content: center;
         color: $jasny;
         font-size: 2rem;
-        
-        h1{
+
+        h1 {
+            text-align: center;
             margin-left: 10rem;
             position: relative;
-            &::after{
-                content: '';
+            &::after {
+                content: "";
                 position: absolute;
                 bottom: 0;
                 left: 0;
@@ -32,29 +34,80 @@
                 border-radius: 10px;
                 transition: ease all 0.3s;
             }
-            &:hover{
-                &::after{
-                width: 100%;
-
+            &:hover {
+                &::after {
+                    width: 100%;
                 }
             }
         }
+
+        .fala {
+            position: absolute;
+            bottom: 0px;
+            transform: rotate(180deg) translateY(-90%);
+        }
+        .fala1 {
+            z-index: 10;
+            padding-top: 20px;
+        }
+        .fala2 {
+            z-index: 9;
+            opacity: 70%;
+        }
+        .fala3 {
+            z-index: 8;
+            opacity: 70%;
+        }
     }
-    .fala {
-        position: absolute;
-        bottom: 0px;
-        transform: rotate(180deg) translateY(-90%);
+
+    .spis {
+        margin: 200px auto;
+        width: 80%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+
+        .temat {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 5rem;
+            &:nth-child(2n) {
+                flex-direction: row-reverse;
+            }
+            img {
+                width:30%;
+                object-fit: contain;
+            }
+            div {
+                width: 30%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
     }
-    .fala1{
-        z-index: 10;
-        padding-top: 10px;
+}
+
+@media (max-width: $tablet) {
+    .strona-glowna {
+        .el1 {
+            align-items: center;
+            h1 {
+                margin: 0px;
+            }
+        }
     }
-    .fala2{
-        z-index: 9;
-        opacity: 70%;
-    }
-    .fala3{
-        z-index: 8;
-        opacity: 70%;
+}
+@media (max-width: $smartfon) {
+    .strona-glowna {
+        .el1 {
+            font-size: 1rem;
+            // font-size: 50%;
+        }
     }
 }

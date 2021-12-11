@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
-    const [bocznaNawigacja, ustawBocznaNawigacje] = useState(true);
+    const [bocznaNawigacja, ustawBocznaNawigacje] = useState(false);
     const zmienStanNawigacji = () => {
         ustawBocznaNawigacje(!bocznaNawigacja);
     };
