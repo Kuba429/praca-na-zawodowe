@@ -5,13 +5,30 @@
     background: $jasny;
     padding: 0px;
     .el1 {
-        height: 100vh;
+        height: 80vh;
         width: 100%;
-        background: $akcent;
+        background: $ciemny;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $jasny;
+        font-size: 2rem;
     }
     .fala {
         position: absolute;
         bottom: 0px;
         transform: rotate(180deg) translateY(-90%);
+    }
+    .fala1{
+        z-index: 10;
+        padding-top: 10px;
+    }
+    .fala2{
+        z-index: 9;
+        opacity: 70%;
+    }
+    .fala3{
+        z-index: 8;
+        opacity: 70%;
     }
 }

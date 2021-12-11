@@ -1,5 +1,8 @@
 @import "./zmienne.scss";
-@import './strona-glowna.scss';
+@import "./strona-glowna.scss";
+
+* {
+    font-family: 'Poppins', sans-serif;}
 body {
     background: $jasny;
     margin: 0px;
