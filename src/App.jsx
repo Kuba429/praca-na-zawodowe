@@ -1,10 +1,17 @@
-import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./komponenty/Navbar";
 import StronaGlowna from "./komponenty/StronaGlowna";
 import Aplikacje from "./komponenty/Aplikacje";
 import OStronie from "./komponenty/OStronie";
 import BlackMirror from "./komponenty/BlackMirror";
 function App() {
+    const lokalizacja = useLocation();
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "instant" });
+    }, [lokalizacja.pathname]);
+
     return (
         <div className="App">
             <Navbar />
