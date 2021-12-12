@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import TRUNK from "vanta/dist/vanta.trunk.min.js";
-
 import urlBlackMirrorBaner from "../zdjecia/black-mirror-baner.jpg";
 import urlFrankiAmy from "../zdjecia/frank-i-amy.png";
 export default function BlackMirror() {
@@ -16,13 +15,14 @@ export default function BlackMirror() {
                     scaleMobile: 0.1,
                     spacing: 1.0,
                     chaos: 3.0,
+                    p5: p5,
                 })
             );
         }
         return () => {
             if (efektVanta) efektVanta.destroy();
         };
-    }, [vantaRef]);
+    }, [efektVanta]);
 
     return (
         <div className="BlackMirror">
@@ -32,7 +32,7 @@ export default function BlackMirror() {
                 <a href="#opis">
                     <ion-icon
                         size="large"
-                        name="arrow-down-circle-outline"
+                        name="chevron-down-outline"
                     ></ion-icon>
                 </a>
             </div>
