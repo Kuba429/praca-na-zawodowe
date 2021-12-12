@@ -1,0 +1,31 @@
+@import "./aplikacja.scss";
+.Aplikacje {
+    .tytul {
+        position: relative;
+        overflow-x: hidden;
+        height: 100vh;
+        width: 100%;
+        background: $b-ciemny;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .bloby {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            display: absolute;
+            color: $jasny;
+            z-index: 10;
+        }
+    }
+    section{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        // gap: 15rem;
+        
+    }
+}
