@@ -1,7 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import TRUNK from "vanta/dist/vanta.trunk.min.js";
+import { v4 } from "uuid";
 import urlBlackMirrorBaner from "../zdjecia/black-mirror-baner.jpg";
 import urlFrankiAmy from "../zdjecia/frank-i-amy.png";
+import urlCoach from "../zdjecia/coach.jpg";
+import urlAplikacja from "../zdjecia/blackmirror-aplikacja.png";
 export default function BlackMirror() {
     const [efektVanta, ustawEfektVanta] = useState(false);
     const vantaRef = useRef(null);
@@ -65,10 +68,38 @@ export default function BlackMirror() {
             <section className="technologie">
                 <h1>Technologie</h1>
                 <h5>pojawiające się w odcniku</h5>
-                <div>
-                    <h3>Coach</h3>
-                </div>
+                {technologie.map((technologia) => {
+                    return (
+                        <div key={v4()} className="technologia">
+                            <div className="tresc">
+                                <div>
+                                    <h2 className="text-center">
+                                        {technologia.tytul}
+                                    </h2>
+                                    <p>{technologia.opis}</p>
+                                </div>
+                                <img
+                                    src={technologia.zdjecie}
+                                    alt={technologia.tytul}
+                                />
+                            </div>
+                        </div>
+                    );
+                })}
             </section>
         </div>
     );
 }
+
+const technologie = [
+    {
+        tytul: "Coach",
+        opis: 'System "Coach" (po polsku trener) dobiera ludzi w pary. Użytkownicy już na samym początku relacji wiedzą ile będzie ona trwać. Związki mogą trwać godziny, dni, miesiące lub nawet lata. W ten sposób system zbiera informacje o kompatybilności użytkowników w celu znalezienia idealnego, permanentnego partnera.',
+        zdjecie: urlCoach,
+    },
+    {
+        tytul: "Aplikacja Randkowa",
+        opis: "Aplikacja randkowa pokazuje w procentach kompatybilność zainteresowanych sobą osób. Informacje te pozyskuje przeprowadzając 1000 symulacji.",
+        zdjecie: urlAplikacja,
+    },
+];

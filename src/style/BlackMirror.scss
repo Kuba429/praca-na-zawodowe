@@ -8,8 +8,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    & h1{
-        font-size: 2.6rem ;
+    img{
+        border-radius: 10px;
+    }
+    & h1 {
+        font-size: 2.6rem;
         text-align: center;
     }
     .tytul {
@@ -39,7 +42,8 @@
             position: absolute;
             bottom: 2rem;
             color: $jasny;
-            
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-tap-highlight-color: transparent;
         }
     }
     .opis {
@@ -50,7 +54,7 @@
         justify-content: center;
         align-items: center;
         img {
-            width: 550px;
+            width: 700px;
             max-width: 98%;
         }
         h1 {
@@ -58,11 +62,61 @@
             margin-top: 3rem;
         }
     }
-    .technologie{
-        h1,h5{
+    .technologie {
+        h1,
+        h5 {
             margin: 0;
             text-align: center;
         }
-        
+
+        .technologia {
+            margin: 5rem 0;
+            &:nth-child(2n) {
+                .tresc {
+                    flex-direction: row-reverse;
+                }
+            }
+            .tresc {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                div {
+                    width: 50%;
+
+                    p {
+                        // width: 50%;
+
+                        text-align: center;
+                    }
+                }
+                img {
+                    max-width: 40%;
+                    min-width: 200px;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $smartfon) {
+    .BlackMirror {
+        .technologie {
+            .technologia {
+                .tresc {
+                    flex-direction: column;
+                    div {
+                        width: 90%;
+                    }
+                    img {
+                        max-width: unset;
+                        width: 84%;
+                        max-height: unset;
+                    }
+                }
+            }
+        }
     }
 }
