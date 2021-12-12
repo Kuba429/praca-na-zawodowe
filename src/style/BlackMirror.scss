@@ -28,6 +28,7 @@
         h1 {
             margin: 0;
             font-size: 4rem;
+            // background: black;
         }
         p {
             margin: 0;
@@ -37,6 +38,8 @@
         a {
             position: absolute;
             bottom: 2rem;
+            color: $jasny;
+            
         }
     }
     .opis {

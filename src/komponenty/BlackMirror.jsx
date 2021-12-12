@@ -1,13 +1,40 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
+import TRUNK from "vanta/dist/vanta.trunk.min.js";
+
 import urlBlackMirrorBaner from "../zdjecia/black-mirror-baner.jpg";
 import urlFrankiAmy from "../zdjecia/frank-i-amy.png";
 export default function BlackMirror() {
+    const [efektVanta, ustawEfektVanta] = useState(false);
+    const vantaRef = useRef(null);
+    useEffect(() => {
+        if (!efektVanta) {
+            ustawEfektVanta(
+                TRUNK({
+                    el: vantaRef.current,
+                    color: "#14FFEC",
+                    backgroundColor: "#212121",
+                    scaleMobile: 0.1,
+                    spacing: 1.0,
+                    chaos: 3.0,
+                })
+            );
+        }
+        return () => {
+            if (efektVanta) efektVanta.destroy();
+        };
+    }, [vantaRef]);
+
     return (
         <div className="BlackMirror">
-            <div className="tytul">
+            <div className="tytul" ref={vantaRef}>
                 <h1>Black Mirror</h1>
                 <p>Hang The DJ</p>
-                <a href="#opis">a</a>
+                <a href="#opis">
+                    <ion-icon
+                        size="large"
+                        name="arrow-down-circle-outline"
+                    ></ion-icon>
+                </a>
             </div>
             <section className="opis" id="opis">
                 <p className="text-center">
