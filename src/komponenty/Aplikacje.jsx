@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Helmet } from "react-helmet";
+
 import Aplikacja from "./Aplikacja";
 import Bloby from "./Bloby";
 import { v4 } from "uuid";

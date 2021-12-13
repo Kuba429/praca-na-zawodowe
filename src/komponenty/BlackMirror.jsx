@@ -1,4 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
+import { Helmet } from "react-helmet";
+
 import TRUNK from "vanta/dist/vanta.trunk.min.js";
 import { v4 } from "uuid";
 import p5 from "p5";
