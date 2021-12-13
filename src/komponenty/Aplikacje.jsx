@@ -14,6 +14,9 @@ export default function Aplikacje() {
 
     return (
         <div className="Aplikacje">
+            <Helmet>
+                <title>Aplikacje mobilne</title>
+            </Helmet>
             <div className="tytul">
                 <Bloby />
                 <h1>Aplikacje</h1>

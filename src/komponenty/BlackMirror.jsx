@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import TRUNK from "vanta/dist/vanta.trunk.min.js";
 import { v4 } from "uuid";
+import p5 from "p5";
 import urlBlackMirrorBaner from "../zdjecia/black-mirror-baner.jpg";
 import urlFrankiAmy from "../zdjecia/frank-i-amy.png";
 import urlCoach from "../zdjecia/coach.jpg";
@@ -29,6 +30,9 @@ export default function BlackMirror() {
 
     return (
         <div className="BlackMirror">
+            <Helmet>
+                <title>Black Mirror: Hang The DJ</title>
+            </Helmet>
             <div className="tytul" ref={vantaRef}>
                 <h1>Black Mirror</h1>
                 <p>Hang The DJ</p>
