@@ -45,7 +45,7 @@ const aplikacjeDane = [
     },
     {
         tytul: "Microsoft To Do",
-        opis: "TV Time to aplikacja ułatwiająca śledzenie postępu w oglądaniu seriali i filmów. Pozwala również na czytanie i zostawianie recenzji i więcej.",
+        opis: 'Prosta aplikacja typu "to do list" stworzona przez Microsoft. Pozwala na organizację zadań i bardzo dobrą synchronizację z innymi ekosystemami (np. apple)',
         urlZdjecia: urlToDo,
         appStore:
             "https://apps.apple.com/pl/app/microsoft-to-do/id1212616790?l=pl",
