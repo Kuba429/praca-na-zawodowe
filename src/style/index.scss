@@ -1,13 +1,13 @@
 @import "./zmienne.scss";
 @import "./strona-glowna.scss";
 @import "./navbar.scss";
-@import './BlackMirror.scss';
-@import './aplikacje.scss';
+@import "./BlackMirror.scss";
+@import "./aplikacje.scss";
+@import "./oStronie.scss";
 * {
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
-
 }
 
 body {
@@ -15,6 +15,6 @@ body {
     margin: 0px;
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
