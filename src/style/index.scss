@@ -1,6 +1,7 @@
 @import "./zmienne.scss";
 @import "./strona-glowna.scss";
 @import "./navbar.scss";
+@import "./footer.scss";
 @import "./BlackMirror.scss";
 @import "./aplikacje.scss";
 @import "./oStronie.scss";
@@ -13,6 +14,21 @@
 body {
     background: $jasny;
     margin: 0px;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 1px $ciemny;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba($ciemny, 0.7);
+        border-radius: 100px;
+    }
+
+    .podstrona{
+        min-height: 100vh;
+    }
 }
 
 .text-center {

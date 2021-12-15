@@ -5,6 +5,7 @@ import StronaGlowna from "./komponenty/StronaGlowna";
 import Aplikacje from "./komponenty/Aplikacje";
 import OStronie from "./komponenty/OStronie";
 import BlackMirror from "./komponenty/BlackMirror";
+import Footer from "./komponenty/Footer";
 function App() {
     const lokalizacja = useLocation();
 
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/aplikacje" element={<Aplikacje />} />
                 <Route path="/o-stronie" element={<OStronie />} />
             </Routes>
+            <Footer />
         </div>
     );
 }

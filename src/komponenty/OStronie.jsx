@@ -5,7 +5,7 @@ import urlVscode from "../zdjecia/vscode.svg";
 import urlGit from "../zdjecia/git.svg";
 export default function OStronie() {
     return (
-        <div className="oStronie">
+        <div className="oStronie podstrona">
             <Helmet>
                 <title>O stronie</title>
             </Helmet>

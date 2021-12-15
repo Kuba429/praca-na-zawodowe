@@ -31,7 +31,7 @@ export default function BlackMirror() {
     }, [efektVanta]);
 
     return (
-        <div className="BlackMirror">
+        <div className="BlackMirror podstrona">
             <Helmet>
                 <title>Black Mirror: Hang The DJ</title>
             </Helmet>

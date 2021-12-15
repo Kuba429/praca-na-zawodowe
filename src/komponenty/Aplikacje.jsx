@@ -15,7 +15,7 @@ export default function Aplikacje() {
     const blobRef = useRef(null);
 
     return (
-        <div className="Aplikacje">
+        <div className="Aplikacje podstrona">
             <Helmet>
                 <title>Aplikacje mobilne</title>
             </Helmet>
