@@ -4,7 +4,6 @@
     margin: 0px;
     margin-bottom: 3rem;
     display: flex;
-    gap: 8rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -63,6 +62,7 @@
         }
     }
     .technologie {
+        margin-top: 8rem;
         h1,
         h5 {
             margin: 0;
@@ -70,7 +70,8 @@
         }
 
         .technologia {
-            margin: 5rem 0;
+            margin-bottom: 4rem;
+            margin-top: 1rem;
             &:nth-child(2n) {
                 .tresc {
                     flex-direction: row-reverse;
